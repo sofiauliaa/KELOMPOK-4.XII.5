@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sofi's Portfolio - Login</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+
+    /* BACKGROUND LOTSO */
+    background:
+    linear-gradient(
+        rgba(255, 105, 160, 0.25),
+        rgba(255, 105, 160, 0.25)
+    ),
+    url('lotso.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* LOTSO SEBELAH KIRI DAN KANAN */
+.lotso-side {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.lotso-side img {
+    width: 175px;
+    height: 190px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 10px #a52b61);
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+/* HIASAN MELAYANG */
+.decor {
+    position: fixed;
+    font-size: 30px;
+    z-index: 1;
+    animation: floating 3s infinite ease-in-out;
+}
+
+.decor1 {
+    top: 8%;
+    left: 25%;
+}
+
+.decor2 {
+    top: 8%;
+    right: 25%;
+}
+
+.decor3 {
+    bottom: 8%;
+    left: 25%;
+}
+
+.decor4 {
+    bottom: 8%;
+    right: 25%;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* KOTAK LOGIN */
+.login-box {
+    position: relative;
+    z-index: 3;
+    width: 360px;
+    padding: 35px 30px;
+    text-align: center;
+    border-radius: 30px;
+    background: rgba(255, 240, 248, 0.94);
+    border: 3px solid white;
+    box-shadow: 0 10px 35px rgba(150, 20, 80, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* FOTO LOTSO */
+.profile {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ff9fc6;
+    margin: 12px 0;
+    box-shadow: 0 5px 15px #ffc0d8;
+}
+
+/* JUDUL */
+h1 {
+    color: #e83e83;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #b64c79;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* INPUT */
+.input-box {
+    margin-bottom: 17px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: 2px solid #ffc0d8;
+    outline: none;
+    background: white;
+    font-size: 13px;
+    color: #a64c70;
+    transition: .3s;
+}
+
+.input-box input:focus {
+    border-color: #e83e83;
+    box-shadow: 0 0 8px #ffc0d8;
+}
+
+/* TOMBOL LOGIN */
+.login-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff8fba, #e83e83);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #ed5798, #d82e75);
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 20px;
+    color: #b64c79;
+    font-size: 12px;
+}
+
+/* RESPONSIVE HP */
+@media(max-width: 600px) {
+
+    .login-box {
+        width: 72%;
+        padding: 25px 15px;
+    }
+
+    .lotso-side {
+        width: 75px;
+    }
+
+    .lotso-side img {
+        width: 85px;
+        height: 110px;
+    }
+
+    .profile {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .decor {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOTSO KIRI -->
+<div class="lotso-side left">
+    <img src="lotso.png" alt="Lotso">
+    <img src="lotso.png" alt="Lotso">
+</div>
+
+<!-- LOTSO KANAN -->
+<div class="lotso-side right">
+    <img src="lotso.png" alt="Lotso">
+    <img src="lotso.png" alt="Lotso">
+</div>
+
+<!-- HIASAN -->
+<div class="decor decor1">🍓</div>
+<div class="decor decor2">💗</div>
+<div class="decor decor3">💕</div>
+<div class="decor decor4">🍓</div>
+
+<!-- HALAMAN LOGIN -->
+<div class="login-box">
+
+    <div style="font-size:25px;">
+        🍓 💗 🍓
+    </div>
+
+    <img
+        src="lotso.png"
+        class="profile"
+        alt="Lotso">
+
+    <h1>Welcome!</h1>
+
+    <p class="subtitle">
+        Welcome to Sofi's Portfolio ♡
+    </p>
+
+    <form onsubmit="login(event)">
+
+        <div class="input-box">
+            <input
+                type="text"
+                id="username"
+                placeholder="♡ Username"
+                required>
+        </div>
+
+        <div class="input-box">
+            <input
+                type="password"
+                id="password"
+                placeholder="♡ Password"
+                required>
+        </div>
+
+        <button class="login-btn" type="submit">
+            LOGIN ♡
+        </button>
+
+    </form>
+
+    <div class="footer">
+        Made with love by Sofi 🍓
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT LOGIN -->
+<script>
+function login(event) {
+    event.preventDefault();
+
+    let username =
+        document.getElementById("username").value;
+
+    let password =
+        document.getElementById("password").value;
+
+    if (
+        username === "aullsopp" &&
+        password === "060620"
+    ) {
+
+        alert("Welcome to Sofi's Portfolio! 💗");
+
+        window.location.href =
+        "https://sofiauliaa.github.io/portofolio-sofi/";
+
+    } else {
+
+        alert("Username atau password salah! 🍓");
+
+    }
+}
+</script>
+
+</body>
+</html>
