@@ -221,6 +221,24 @@ h1 {
         font-size: 20px;
     }
 }
+    .back-btn {
+    width: 100%;
+    padding: 11px;
+    margin-top: 12px;
+    border: 2px solid #ed78a8;
+    border-radius: 30px;
+    background: white;
+    color: #e83e83;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.back-btn:hover {
+    background: #ffe0ed;
+    transform: scale(1.03);
+}
 </style>
 </head>
 
@@ -285,7 +303,10 @@ h1 {
         </button>
 
     </form>
-
+    
+<button class="back-btn" onclick="kembali()">
+    ← KEMBALI
+</button>
     <div class="footer">
         Made with love by Sofi 🍓
     </div>
@@ -318,6 +339,9 @@ function login(event) {
         alert("Username atau password salah! 🍓");
 
     }
+}
+    function kembali() {
+    window.location.href = "index.html";
 }
 </script>
 
